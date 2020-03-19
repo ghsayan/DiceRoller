@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.Random;
+
+import es.dmoral.toasty.Toasty;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView im1,im2;
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void rollDice(){
+        Toasty.success(this,"Dice Rolled!",Toast.LENGTH_SHORT).show();
         switch(randNum.nextInt(6)+1){
             case 1:
                 im1.setImageResource(R.drawable.dice1);
